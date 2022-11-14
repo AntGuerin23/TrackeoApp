@@ -13,6 +13,8 @@
 		ADDECECD290C614300F5D9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBB290C614300F5D9B1 /* ContentView.swift */; };
 		ADDECECE290C614300F5D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDECEBC290C614300F5D9B1 /* Assets.xcassets */; };
 		ADDECECF290C614300F5D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDECEBC290C614300F5D9B1 /* Assets.xcassets */; };
+		C84979DCF81FD26A4AA45373 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8497C9938BB7ADDBD2BD0F6 /* Location.swift */; };
+		C8497F7B6A1297B61F7BCC3A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849790BA268703589B2AC5B /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		ADDECEC1290C614300F5D9B1 /* Trackeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDECEC7290C614300F5D9B1 /* Trackeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDECEC9290C614300F5D9B1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C849790BA268703589B2AC5B /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		C8497C9938BB7ADDBD2BD0F6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 				ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */,
 				ADDECEBB290C614300F5D9B1 /* ContentView.swift */,
 				ADDECEBC290C614300F5D9B1 /* Assets.xcassets */,
+				C8497D4A34F46AE0E516D114 /* Models */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -76,6 +81,15 @@
 				ADDECEC9290C614300F5D9B1 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		C8497D4A34F46AE0E516D114 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C849790BA268703589B2AC5B /* ApiClient.swift */,
+				C8497C9938BB7ADDBD2BD0F6 /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +192,8 @@
 			files = (
 				ADDECECC290C614300F5D9B1 /* ContentView.swift in Sources */,
 				ADDECECA290C614300F5D9B1 /* TrackeoApp.swift in Sources */,
+				C8497F7B6A1297B61F7BCC3A /* ApiClient.swift in Sources */,
+				C84979DCF81FD26A4AA45373 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
