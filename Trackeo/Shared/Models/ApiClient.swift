@@ -15,6 +15,7 @@ class ApiClient {
             print("Cannot access api")
             return nil
         }
+        
         let jsonData = String(decoding: response.0, as: UTF8.self).data(using: .utf8)
         do {
             return try JSONDecoder().decode([Location].self, from: jsonData!).last
@@ -22,9 +23,8 @@ class ApiClient {
             print("Couldn't decode locations")
             return nil
         }
-
     }
-
+    
     private static func callEndpoint(_ endpoint : String) async -> (Data, URLResponse)? {
         do {
             let url = URL(string: baseUrl + endpoint)!

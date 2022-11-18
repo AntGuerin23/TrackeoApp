@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADBD1D2629281CC6002DE8F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD1D2529281A56002DE8F6 /* ContentView.swift */; };
+		ADBD1D2729281CC6002DE8F6 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD1D2329281A56002DE8F6 /* CompassView.swift */; };
+		ADBD1D2829281CC6002DE8F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD1D2429281A56002DE8F6 /* MapView.swift */; };
+		ADBD1D2D29282C8D002DE8F6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD1D2C29282C8D002DE8F6 /* LocationManager.swift */; };
 		ADDECECA290C614300F5D9B1 /* TrackeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */; };
-		ADDECECB290C614300F5D9B1 /* TrackeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */; };
-		ADDECECC290C614300F5D9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBB290C614300F5D9B1 /* ContentView.swift */; };
-		ADDECECD290C614300F5D9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBB290C614300F5D9B1 /* ContentView.swift */; };
 		ADDECECE290C614300F5D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDECEBC290C614300F5D9B1 /* Assets.xcassets */; };
-		ADDECECF290C614300F5D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDECEBC290C614300F5D9B1 /* Assets.xcassets */; };
 		C84979DCF81FD26A4AA45373 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8497C9938BB7ADDBD2BD0F6 /* Location.swift */; };
 		C8497F7B6A1297B61F7BCC3A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849790BA268703589B2AC5B /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADBD1D2329281A56002DE8F6 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		ADBD1D2429281A56002DE8F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		ADBD1D2529281A56002DE8F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADBD1D2C29282C8D002DE8F6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackeoApp.swift; sourceTree = "<group>"; };
-		ADDECEBB290C614300F5D9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADDECEBC290C614300F5D9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDECEC1290C614300F5D9B1 /* Trackeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADDECEC7290C614300F5D9B1 /* Trackeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDECEC9290C614300F5D9B1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C849790BA268703589B2AC5B /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		C8497C9938BB7ADDBD2BD0F6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -36,16 +38,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADDECEC4290C614300F5D9B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADBD1D2229281A56002DE8F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADBD1D2529281A56002DE8F6 /* ContentView.swift */,
+				ADBD1D2329281A56002DE8F6 /* CompassView.swift */,
+				ADBD1D2429281A56002DE8F6 /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ADDECEB4290C614200F5D9B1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +63,9 @@
 		ADDECEB9290C614300F5D9B1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */,
-				ADDECEBB290C614300F5D9B1 /* ContentView.swift */,
+				ADBD1D2229281A56002DE8F6 /* Views */,
 				ADDECEBC290C614300F5D9B1 /* Assets.xcassets */,
+				ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */,
 				C8497D4A34F46AE0E516D114 /* Models */,
 			);
 			path = Shared;
@@ -70,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				ADDECEC1290C614300F5D9B1 /* Trackeo.app */,
-				ADDECEC7290C614300F5D9B1 /* Trackeo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +90,7 @@
 		C8497D4A34F46AE0E516D114 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ADBD1D2C29282C8D002DE8F6 /* LocationManager.swift */,
 				C849790BA268703589B2AC5B /* ApiClient.swift */,
 				C8497C9938BB7ADDBD2BD0F6 /* Location.swift */,
 			);
@@ -112,23 +117,6 @@
 			productReference = ADDECEC1290C614300F5D9B1 /* Trackeo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADDECEC6290C614300F5D9B1 /* Trackeo (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ADDECED5290C614300F5D9B1 /* Build configuration list for PBXNativeTarget "Trackeo (macOS)" */;
-			buildPhases = (
-				ADDECEC3290C614300F5D9B1 /* Sources */,
-				ADDECEC4290C614300F5D9B1 /* Frameworks */,
-				ADDECEC5290C614300F5D9B1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Trackeo (macOS)";
-			productName = "Trackeo (macOS)";
-			productReference = ADDECEC7290C614300F5D9B1 /* Trackeo.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,9 +128,6 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					ADDECEC0290C614300F5D9B1 = {
-						CreatedOnToolsVersion = 13.4.1;
-					};
-					ADDECEC6290C614300F5D9B1 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
@@ -161,7 +146,6 @@
 			projectRoot = "";
 			targets = (
 				ADDECEC0290C614300F5D9B1 /* Trackeo (iOS) */,
-				ADDECEC6290C614300F5D9B1 /* Trackeo (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -175,14 +159,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADDECEC5290C614300F5D9B1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADDECECF290C614300F5D9B1 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -190,19 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADDECECC290C614300F5D9B1 /* ContentView.swift in Sources */,
+				ADBD1D2629281CC6002DE8F6 /* ContentView.swift in Sources */,
+				ADBD1D2729281CC6002DE8F6 /* CompassView.swift in Sources */,
+				ADBD1D2829281CC6002DE8F6 /* MapView.swift in Sources */,
+				ADBD1D2D29282C8D002DE8F6 /* LocationManager.swift in Sources */,
 				ADDECECA290C614300F5D9B1 /* TrackeoApp.swift in Sources */,
 				C8497F7B6A1297B61F7BCC3A /* ApiClient.swift in Sources */,
 				C84979DCF81FD26A4AA45373 /* Location.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ADDECEC3290C614300F5D9B1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADDECECD290C614300F5D9B1 /* ContentView.swift in Sources */,
-				ADDECECB290C614300F5D9B1 /* TrackeoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +298,13 @@
 				DEVELOPMENT_TEAM = N5KB95X2YM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,12 +329,13 @@
 				DEVELOPMENT_TEAM = N5KB95X2YM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,62 +348,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		ADDECED6290C614300F5D9B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5KB95X2YM;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cegepst.Trackeo;
-				PRODUCT_NAME = Trackeo;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		ADDECED7290C614300F5D9B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5KB95X2YM;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cegepst.Trackeo;
-				PRODUCT_NAME = Trackeo;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -452,15 +368,6 @@
 			buildConfigurations = (
 				ADDECED3290C614300F5D9B1 /* Debug */,
 				ADDECED4290C614300F5D9B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ADDECED5290C614300F5D9B1 /* Build configuration list for PBXNativeTarget "Trackeo (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ADDECED6290C614300F5D9B1 /* Debug */,
-				ADDECED7290C614300F5D9B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
