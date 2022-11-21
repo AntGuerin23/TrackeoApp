@@ -9,7 +9,7 @@ class ApiClient {
         await callEndpoint(pingEndpoint);
     }
 
-    static func getLocations() async -> Location? {
+    static func getLocation() async -> Location? {
         //TODO : Add security, require secret so that not everybody can get locations that knows the ip address
         guard let response = await callEndpoint(locationsEndpoint) else {
             print("Cannot access api")
@@ -18,6 +18,7 @@ class ApiClient {
         
         let jsonData = String(decoding: response.0, as: UTF8.self).data(using: .utf8)
         do {
+            print(String(decoding: jsonData!, as: UTF8.self))
             return try JSONDecoder().decode([Location].self, from: jsonData!).last
         } catch {
             print("Couldn't decode locations")

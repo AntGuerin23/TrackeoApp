@@ -11,15 +11,15 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
             manager.delegate = self
             manager.desiredAccuracy = kCLLocationAccuracyBest
             manager.requestWhenInUseAuthorization()
-            //manager.startUpdatingLocation()
+            manager.startUpdatingLocation()
         }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locations.last.map {
-            region = MKCoordinateRegion(
-                center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            )
-        }
+//        locations.last.map {
+//            region = MKCoordinateRegion(
+//                center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
+//                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//            )
+//        }
    }
 }

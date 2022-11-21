@@ -1,7 +1,7 @@
 import Foundation
 
-struct Location : Decodable {
-    let latitude: String
-    let longitude: String
-
+struct Location : Identifiable, Equatable, Codable {
+    let id: UUID?
+    let latitude: Double
+    let longitude: Double
 }
