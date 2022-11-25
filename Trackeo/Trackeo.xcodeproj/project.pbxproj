@@ -14,6 +14,7 @@
 		ADDECECA290C614300F5D9B1 /* TrackeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */; };
 		ADDECECE290C614300F5D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDECEBC290C614300F5D9B1 /* Assets.xcassets */; };
 		ADE8DD28292C2EED000A45DB /* CatAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8DD27292C2EED000A45DB /* CatAnnotation.swift */; };
+		ADEDC87B29315A22009A25A0 /* DefaultRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEDC87A29315A22009A25A0 /* DefaultRegion.swift */; };
 		C84979DCF81FD26A4AA45373 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8497C9938BB7ADDBD2BD0F6 /* Location.swift */; };
 		C8497F7B6A1297B61F7BCC3A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849790BA268703589B2AC5B /* ApiClient.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		ADDECEC1290C614300F5D9B1 /* Trackeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDECEC9290C614300F5D9B1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		ADE8DD27292C2EED000A45DB /* CatAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAnnotation.swift; sourceTree = "<group>"; };
+		ADEDC87A29315A22009A25A0 /* DefaultRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRegion.swift; sourceTree = "<group>"; };
 		C849790BA268703589B2AC5B /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		C8497C9938BB7ADDBD2BD0F6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				ADBD1D2C29282C8D002DE8F6 /* LocationManager.swift */,
 				C849790BA268703589B2AC5B /* ApiClient.swift */,
 				C8497C9938BB7ADDBD2BD0F6 /* Location.swift */,
+				ADEDC87A29315A22009A25A0 /* DefaultRegion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				ADDECECA290C614300F5D9B1 /* TrackeoApp.swift in Sources */,
 				C8497F7B6A1297B61F7BCC3A /* ApiClient.swift in Sources */,
 				C84979DCF81FD26A4AA45373 /* Location.swift in Sources */,
+				ADEDC87B29315A22009A25A0 /* DefaultRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
