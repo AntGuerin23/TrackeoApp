@@ -15,14 +15,12 @@ class Compass: NSObject, ObservableObject, CLLocationManagerDelegate {
     override init() {
         self.locationManager = CLLocationManager()
         super.init()
-        
         self.locationManager.delegate = self
         self.setup()
     }
     
     private func setup() {
         self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.headingAvailable() {
             self.locationManager.startUpdatingLocation()
             self.locationManager.startUpdatingHeading()
@@ -30,6 +28,6 @@ class Compass: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        self.degrees = -1 * newHeading.magneticHeading
+        self.degrees = newHeading.magneticHeading
     }
 }

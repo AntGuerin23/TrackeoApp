@@ -1,12 +1,14 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import Combine
 
 struct MapView: View {
     @StateObject var manager = LocationManager()
     @State private var locations = [Location]()
-    @State var tracking:MapUserTrackingMode = .follow
+    @State private var timer: AnyCancellable?
 
+    @State var tracking:MapUserTrackingMode = .follow
 
     var body: some View {
         ZStack {

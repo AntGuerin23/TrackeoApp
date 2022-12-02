@@ -1,31 +1,54 @@
 import SwiftUI
+import Combine
 
 struct CompassView: View {
-        
-    @ObservedObject var compass = Compass()
+    @ObservedObject private var compass = Compass()
+    @StateObject var manager = LocationManager()
+    @State private var timer: AnyCancellable?
+    @State private var apiTimer: AnyCancellable?
+    @State private var distance : Double = 0
+    @State private var userLocation : Location?
     
     var body: some View {
         VStack {
-            Text("100 m").font(.system(size: 40)).padding(8)
+            Text("\(distance, specifier: "%.1f") m").font(.system(size: 40)).padding(8)
             
             ZStack {
                 Circle().foregroundColor(Color.mint).frame(width: 330, height: 330).shadow(radius: 10)
                 Circle().foregroundColor(Color.white)
                     .frame(width: 300, height: 300)
-
-                Image(systemName: "arrow.up").font(.system(size: 200)).rotationEffect(Angle(degrees: compass.degrees))
+                Image(systemName: "arrow.up").font(.system(size: 200)).rotationEffect(getHeading())
                     .foregroundColor(Color.cyan)
-                
-
             }
-
-        }.task {
-            print(LocationCalculator.calculateDistance( firstPoint: Location(id: UUID(), latitude: 46.03990770130233, longitude: -73.12967918789305), secondPoint: Location(id: UUID(), latitude: 46.039668691550595, longitude: -73.14779880378347)))
-            
-            
+        }.onAppear() {
+            startTimers()
+        }.onDisappear() {
+            timer?.cancel()
         }
-        
-
+    }
+    
+    private func startTimers() {
+        timer = Timer.publish(every: 0.1, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
+                Task {
+                    let distanceDouble = LocationCalculator.calculateDistance(firstPoint: userLocation ?? manager.getUserLocation(), secondPoint: manager.getUserLocation())
+                    distance = distanceDouble
+                }
+            }
+        apiTimer = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
+                Task {
+                    userLocation = await ApiClient.getLocation() ?? userLocation
+                    await ApiClient.ping()
+                }
+            }
+    }
+    
+    private func getHeading() -> Angle {
+        let bearing = LocationCalculator.getBearing(currentLocation: manager.getUserLocation(), trackerLocation: userLocation ?? manager.getUserLocation())
+        return Angle(degrees: bearing - compass.degrees)
     }
 }
 

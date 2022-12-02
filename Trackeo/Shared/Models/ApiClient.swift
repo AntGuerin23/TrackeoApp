@@ -1,9 +1,9 @@
 import Foundation
 
 class ApiClient {
-    static let baseUrl = "http://159.203.36.1"
-    static let pingEndpoint = "/ping"
-    static let locationsEndpoint = "/locations"
+    private static let baseUrl = "http://159.203.36.1"
+    private static let pingEndpoint = "/ping"
+    private static let locationsEndpoint = "/locations"
 
     static func ping() async {
         await callEndpoint(pingEndpoint);
@@ -15,10 +15,8 @@ class ApiClient {
             print("Cannot access api")
             return nil
         }
-        
         let jsonData = String(decoding: response.0, as: UTF8.self).data(using: .utf8)
         do {
-            print(String(decoding: jsonData!, as: UTF8.self))
             return try JSONDecoder().decode([Location].self, from: jsonData!).last
         } catch {
             print("Couldn't decode locations")

@@ -14,4 +14,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
+    
+    func getUserLocation() -> Location {
+        return Location(id: UUID(), latitude: manager.location!.coordinate.latitude, longitude: manager.location!.coordinate.longitude)
+    }
 }

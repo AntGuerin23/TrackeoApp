@@ -13,6 +13,7 @@
 		ADBD1D2D29282C8D002DE8F6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD1D2C29282C8D002DE8F6 /* LocationManager.swift */; };
 		ADDECECA290C614300F5D9B1 /* TrackeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDECEBA290C614300F5D9B1 /* TrackeoApp.swift */; };
 		ADDECECE290C614300F5D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDECEBC290C614300F5D9B1 /* Assets.xcassets */; };
+		ADE0AD14293A5EDF00DCA264 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE0AD13293A5EDF00DCA264 /* Radians.swift */; };
 		ADE56A0229354790008E63C5 /* LocationCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE56A0129354790008E63C5 /* LocationCalculator.swift */; };
 		ADE56A0429355A84008E63C5 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE56A0329355A84008E63C5 /* Compass.swift */; };
 		ADE8DD28292C2EED000A45DB /* CatAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8DD27292C2EED000A45DB /* CatAnnotation.swift */; };
@@ -30,6 +31,7 @@
 		ADDECEBC290C614300F5D9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDECEC1290C614300F5D9B1 /* Trackeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDECEC9290C614300F5D9B1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		ADE0AD13293A5EDF00DCA264 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
 		ADE56A0129354790008E63C5 /* LocationCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCalculator.swift; sourceTree = "<group>"; };
 		ADE56A0329355A84008E63C5 /* Compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
 		ADE8DD27292C2EED000A45DB /* CatAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAnnotation.swift; sourceTree = "<group>"; };
@@ -96,15 +98,24 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		C8497D4A34F46AE0E516D114 /* Models */ = {
+		ADE0AD15293A7FD600DCA264 /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				ADBD1D2C29282C8D002DE8F6 /* LocationManager.swift */,
-				C849790BA268703589B2AC5B /* ApiClient.swift */,
 				C8497C9938BB7ADDBD2BD0F6 /* Location.swift */,
 				ADEDC87A29315A22009A25A0 /* DefaultRegion.swift */,
 				ADE56A0129354790008E63C5 /* LocationCalculator.swift */,
 				ADE56A0329355A84008E63C5 /* Compass.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		C8497D4A34F46AE0E516D114 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADE0AD15293A7FD600DCA264 /* Location */,
+				C849790BA268703589B2AC5B /* ApiClient.swift */,
+				ADE0AD13293A5EDF00DCA264 /* Radians.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			files = (
 				ADBD1D2629281CC6002DE8F6 /* ContentView.swift in Sources */,
 				ADE8DD28292C2EED000A45DB /* CatAnnotation.swift in Sources */,
+				ADE0AD14293A5EDF00DCA264 /* Radians.swift in Sources */,
 				ADE56A0229354790008E63C5 /* LocationCalculator.swift in Sources */,
 				ADBD1D2729281CC6002DE8F6 /* CompassView.swift in Sources */,
 				ADBD1D2829281CC6002DE8F6 /* MapView.swift in Sources */,
