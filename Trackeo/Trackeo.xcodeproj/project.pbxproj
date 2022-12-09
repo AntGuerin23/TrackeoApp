@@ -54,10 +54,10 @@
 		ADBD1D2229281A56002DE8F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADE0AD17293A8ADC00DCA264 /* Annotations */,
 				ADBD1D2529281A56002DE8F6 /* ContentView.swift */,
 				ADBD1D2329281A56002DE8F6 /* CompassView.swift */,
 				ADBD1D2429281A56002DE8F6 /* MapView.swift */,
-				ADE8DD27292C2EED000A45DB /* CatAnnotation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +110,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		ADE0AD17293A8ADC00DCA264 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				ADE8DD27292C2EED000A45DB /* CatAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
 		C8497D4A34F46AE0E516D114 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +156,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					ADDECEC0290C614300F5D9B1 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -240,6 +248,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -298,6 +307,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

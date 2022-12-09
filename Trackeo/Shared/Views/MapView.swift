@@ -36,7 +36,15 @@ struct MapView: View {
                 Spacer()
             }
         }.task {
-            await checkForNewLocations()
+            timer = Timer.publish(every: 1, on: .main, in: .common)
+                .autoconnect()
+                .sink { _ in
+                    Task {
+                        await checkForNewLocations()
+                    }
+                }
+        }.onDisappear() {
+            timer?.cancel()
         }
     }
     
@@ -44,6 +52,9 @@ struct MapView: View {
         Task {
             await ApiClient.ping()
             let location = await ApiClient.getLocation()
+            if (location?.latitude == locations.last?.latitude && location?.longitude == locations.last?.longitude) {
+                return;
+            }
             locations = [Location]()
             locations.append(Location(id: UUID(), latitude: location!.latitude, longitude: location!.longitude))
         }

@@ -24,6 +24,7 @@ struct CompassView: View {
             startTimers()
         }.onDisappear() {
             timer?.cancel()
+            apiTimer?.cancel()
         }
     }
     

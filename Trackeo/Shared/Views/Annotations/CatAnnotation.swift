@@ -14,6 +14,7 @@ struct CatAnnotation: View {
                     .padding(6)
                     .background(accentColor)
                     .clipShape(Circle())
+                    .shadow(radius: 5)
                 
                 Image(systemName: "triangle.fill")
                     .resizable()
