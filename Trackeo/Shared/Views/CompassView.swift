@@ -15,8 +15,21 @@ struct CompassView: View {
             
             ZStack {
                 Circle().foregroundColor(Color.mint).frame(width: 330, height: 330).shadow(radius: 10)
-                Circle().foregroundColor(Color.white)
-                    .frame(width: 300, height: 300)
+                Circle().foregroundColor(Color.white).frame(width: 300, height: 300)
+                    ZStack {
+                        Circle().foregroundColor(Color.white).frame(width: 230, height: 230)
+                        VStack {
+                            Text("N")
+                            Spacer()
+                            HStack {
+                                Text("O")
+                                Spacer()
+                                Text("E")
+                            }
+                            Spacer()
+                            Text("S")
+                        }
+                }.frame(width: 275, height: 275).rotationEffect(Angle(degrees: compass.degrees * -1))
                 Image(systemName: "arrow.up").font(.system(size: 200)).rotationEffect(getHeading())
                     .foregroundColor(Color.cyan)
             }
