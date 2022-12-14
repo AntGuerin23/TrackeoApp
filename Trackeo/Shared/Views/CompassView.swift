@@ -11,7 +11,7 @@ struct CompassView: View {
     
     var body: some View {
         VStack {
-            Text("\(distance, specifier: "%.1f") m").font(.system(size: 40)).padding(8)
+            Text("\(distance, specifier: "%.0f") m").font(.system(size: 40)).padding(8)
             
             ZStack {
                 Circle().foregroundColor(Color.mint).frame(width: 330, height: 330).shadow(radius: 10)
@@ -47,7 +47,7 @@ struct CompassView: View {
             .sink { _ in
                 Task {
                     let distanceDouble = LocationCalculator.calculateDistance(firstPoint: userLocation ?? manager.getUserLocation(), secondPoint: manager.getUserLocation())
-                    distance = distanceDouble
+                    distance = round(distanceDouble / 5) * 5
                 }
             }
         apiTimer = Timer.publish(every: 1, on: .main, in: .common)
